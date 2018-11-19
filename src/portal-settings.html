@@ -62,7 +62,7 @@
   </div>
 
   <div class="padd-top">
-    <save-config-btn ng-disabled="form.$dirty && form.$invalid" config="{
+    <save-config-btn device="$ctrl.device" ng-disabled="form.$dirty && form.$invalid" config="{
     language: $ctrl.settings.language,
     banner_text: $ctrl.settings.banner_text,
     footer_link: $ctrl.settings.footer_link,

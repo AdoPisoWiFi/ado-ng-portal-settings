@@ -1,0 +1,77 @@
+
+<form name="form">
+  <div class="text-left">
+
+    <div class="form-group">
+      <label>Language:</label>
+      <select class="form-control" ng-options="lang.code as lang.text for lang in $ctrl.languages" ng-model="$ctrl.settings.language">
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Page Title:</label>
+      <input class="form-control" type="text" ng-model="$ctrl.settings.page_title">
+    </div>
+
+    <div class="form-group">
+      <label>Banner Text:</label>
+      <input class="form-control" type="text" ng-model="$ctrl.settings.banner_text">
+    </div>
+    <div class="form-group">
+      <label>Powered By Text:</label>
+      <input class="form-control" type="text" ng-model="$ctrl.settings.footer_text">
+    </div>
+    <div class="form-group">
+      <label>Powered By URL:</label>
+      <input class="form-control" type="text" ng-model="$ctrl.settings.footer_link">
+    </div>
+
+  </div>
+
+  <hr>
+
+  <p>
+  <label>Show/Hide buttons</label>
+  </p>
+
+  <div class="input-demo checkbox-demo padd-bottom">
+    <label class="checkbox-inline custom-checkbox nowrap">
+      <input type="checkbox" name="disable_coinslot" ng-model="$ctrl.settings.disable_coinslot">
+      <span>
+        Disable insert coin button
+      </span>
+    </label>
+  </div>
+
+  <div class="input-demo checkbox-demo padd-bottom">
+    <label class="checkbox-inline custom-checkbox nowrap">
+      <input type="checkbox" name="disable_buy_voucher" ng-model="$ctrl.settings.disable_buy_voucher">
+      <span>
+        Disable buy voucher button
+      </span>
+    </label>
+  </div>
+
+  <div class="input-demo checkbox-demo padd-bottom">
+    <label class="checkbox-inline custom-checkbox nowrap">
+      <input type="checkbox" name="view_rates" ng-model="$ctrl.settings.disable_view_rates">
+      <span>
+        Disable view rates button
+      </span>
+    </label>
+  </div>
+
+  <div class="padd-top">
+    <save-config-btn ng-disabled="form.$dirty && form.$invalid" config="{
+    language: $ctrl.settings.language,
+    banner_text: $ctrl.settings.banner_text,
+    footer_link: $ctrl.settings.footer_link,
+    footer_text: $ctrl.settings.footer_text,
+    page_title: $ctrl.settings.page_title,
+    disable_coinslot: $ctrl.settings.disable_coinslot,
+    disable_buy_voucher: $ctrl.settings.disable_buy_voucher,
+    disable_view_rates: $ctrl.settings.disable_view_rates}">Save Changes</save-config-btn>
+  </div>
+
+</form>
+

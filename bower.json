@@ -1,0 +1,24 @@
+{
+  "name": "ado-ng-portal-settings",
+  "description": "Angular.js 1.x module for changing web portal Settings",
+  "main": "./dist/ado-ng-portal-settings.js",
+  "authors": [
+    "AdoPisoWiFi"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "adopisowifi",
+    "timer-settings"
+  ],
+  "homepage": "https://github.com/AdoPisoWiFi/ado-ng-portal-settings",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ado-save-config-btn": "^1.0.12"
+  }
+}

@@ -9,6 +9,11 @@
     </div>
 
     <div class="form-group">
+      <label>Redirect To:</label>
+      <input type="text" class="form-control" ng-model="$ctrl.settings.redirect_to">
+    </div>
+
+    <div class="form-group">
       <label>Page Title:</label>
       <input class="form-control" type="text" ng-model="$ctrl.settings.page_title">
     </div>
@@ -63,6 +68,7 @@
 
   <div class="padd-top">
     <save-config-btn device="$ctrl.device" ng-disabled="form.$dirty && form.$invalid" config="{
+    redirect_to: $ctrl.settings.redirect_to,
     language: $ctrl.settings.language,
     banner_text: $ctrl.settings.banner_text,
     footer_link: $ctrl.settings.footer_link,

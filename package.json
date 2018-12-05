@@ -1,6 +1,6 @@
 {
   "name": "@adopisowifi/ng-portal-settings",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular.js 1.x module for changing web portal Settings",
   "main": "dist/ado-ng-portal-settings.js",
   "scripts": {
